@@ -1,11 +1,12 @@
 ifdef DEBUG
 CXXFLAGS = -g -DDEBUG
 else
-CXXFLAGS = -O3 -static
+CXXFLAGS = -O3
 endif
 
 PREFIX  = /ndppd/local
 CXX     = /usr/bin/mipsel-linux-gnu-g++
+LDFLAGS = -static
 GZIP    ?= /bin/gzip
 MANDIR  ?= ${DESTDIR}${PREFIX}/share/man
 SBINDIR ?= ${DESTDIR}${PREFIX}/sbin
